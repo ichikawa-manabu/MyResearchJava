@@ -17,6 +17,13 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for MyResearchJava" enabled="true">
+        <sourceOutputDir name="MyResearchJava/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="MyResearchJava/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="MyResearchJava" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="MyResearchJava" target="1.5" />
