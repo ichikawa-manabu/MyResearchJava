@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="IchikawaSoarsModule">
+    <output-path>$PROJECT_DIR$/out/artifacts/IchikawaSoarsModule</output-path>
+    <root id="archive" name="IchikawaSoarsModule.jar">
+      <element id="module-output" name="SoarsModule" />
+    </root>
+  </artifact>
+</component>

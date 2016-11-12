@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KansaiUnivModule">
+    <output-path>$PROJECT_DIR$/out/artifacts/KansaiUnivModule</output-path>
+    <root id="archive" name="KansaiUnivModule.jar">
+      <element id="module-output" name="KansaiUnivModule" />
+    </root>
+  </artifact>
+</component>
