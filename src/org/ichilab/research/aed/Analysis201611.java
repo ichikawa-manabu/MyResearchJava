@@ -23,7 +23,7 @@ public class Analysis201611 {
 
         PrintWriter pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(outFile, false), "Shift_JIS"));
 
-        for(int i=1; i<=7; i++) {
+        for(int i=1; i<=100; i++) {
             File logFile = new File(logDir.getPath() + "/" + Integer.toString(i) + "/userdata/log_agent.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(logFile), "UTF-8"));
             String line = br.readLine();
@@ -32,7 +32,13 @@ public class Analysis201611 {
             }
             while((line = br.readLine()) != null) {
                 String pair[] = line.split("\t");
-                pw.print("\n" + Integer.toString(i) + "\t" + line + "\t" + routeDB.get(pair[4]));
+                if(routeDB.containsKey(pair[4])) {
+                    pw.print("\n" + Integer.toString(i) + "\t" + line + "\t" + routeDB.get(pair[4]));
+                }
+                else {
+                    pw.print("\n" + Integer.toString(i) + "\t" + line + "\t-\t300");
+                }
+
             }
             br.close();
         }
