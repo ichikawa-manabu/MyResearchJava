@@ -13,6 +13,15 @@
     </modules>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.google.maps</groupId>
+            <artifactId>google-maps-services</artifactId>
+            <version>0.1.17</version>
+        </dependency>
+        <dependency>
+            <groupId>se.walkercrou</groupId>
+            <artifactId>google-places-api-java</artifactId>
+            <version>2.1.2</version>
+        </dependency>
     </dependencies>
 </project>
