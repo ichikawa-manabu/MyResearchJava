@@ -1,4 +1,5 @@
 import se.walkercrou.places.GooglePlaces;
+import se.walkercrou.places.Param;
 import se.walkercrou.places.Place;
 
 import java.util.List;
@@ -9,14 +10,13 @@ import java.util.List;
 public class GooglePlaceApiTest {
     public static void main(String args[]) {
         GooglePlaces client = new GooglePlaces("AIzaSyAu7lFsJdjfpYD6XpG53E-trZ6VNo5q4wI");
-        List<Place> places = client.getPlacesByQuery("Empire State Building", GooglePlaces.MAXIMUM_RESULTS);
+        List<Place> places = client.getPlacesByQuery("東所沢", GooglePlaces.MAXIMUM_RESULTS, Param.name("language").value("ja"));
+        System.out.println(places.size());
         Place empireStateBuilding = null;
-        for (Place place : places) {
-            if (place.getName().equals("Empire State Building")) {
-                empireStateBuilding = place;
-                break;
-            }
+        if(places.size()>0) {
+            empireStateBuilding = places.get(0);
         }
+
         if (empireStateBuilding != null) {
             Place detailedEmpireStateBuilding = empireStateBuilding.getDetails(); // sends a GET request for more details
             // Just an example of the amount of information at your disposal:
