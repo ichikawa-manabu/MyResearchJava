@@ -1,4 +1,5 @@
-import org.json.JSONArray;
+package org.ichilab.googleapi;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -9,15 +10,26 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 /**
- * Created by manabu on 2017/01/13.
+ * Created by manabu on 2017/01/14.
  */
-public class GooglePlacesApiTest2 {
-    public static void main(String args[]) {
-        System.out.println("===== HTTP GET Start =====");
+public class GoogleApi {
+    private String key;
+
+    public GoogleApi() {
+
+    }
+
+    public GoogleApi(String key) {
+        this.key = key;
+    }
+
+    private getResponse
+
+    private JSONObject TextSearch(String str, String language) {
         StringBuilder builder = new StringBuilder();
         try {
-            URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?query=東所沢　病院&language=ja&key=AIzaSyAu7lFsJdjfpYD6XpG53E-trZ6VNo5q4wI");
-
+            URL url = new URL("https://maps.googleapis.com/maps/api/place/textsearch/json?query=" + str +
+                    "&language=" + language + "&key=" + key);
             HttpURLConnection connection = null;
 
             try {
@@ -31,7 +43,6 @@ public class GooglePlacesApiTest2 {
                         String line;
                         while ((line = reader.readLine()) != null) {
                             builder.append(line);
-                            System.out.println(line);
                         }
                     }
                 }
@@ -45,16 +56,6 @@ public class GooglePlacesApiTest2 {
         }
 
         JSONObject jsonObject = new JSONObject(builder.toString());
-        System.out.println(jsonObject.length());
-        System.out.println(jsonObject.getJSONArray("results").getJSONObject(0).get("formatted_address"));
-        /*
-        System.out.println("Number of entries " + jsonArray.length());
-        for(int i=0; i<jsonArray.length(); i++) {
-            JSONObject jsonObject = jsonArray.getJSONObject(i);
-            System.out.println(jsonObject.get("results"));
-        }
-        */
-
-        System.out.println("===== HTTP GET End =====");
+        return jsonObject;
     }
 }
