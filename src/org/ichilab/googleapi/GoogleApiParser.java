@@ -1,6 +1,5 @@
 package org.ichilab.googleapi;
 
-import com.google.gson.JsonObject;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
