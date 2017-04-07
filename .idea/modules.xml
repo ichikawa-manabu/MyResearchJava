@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/IshinomakiKarte/IshinomakiKarte.iml" filepath="$PROJECT_DIR$/IshinomakiKarte/IshinomakiKarte.iml" />
       <module fileurl="file://$PROJECT_DIR$/JspPractice/JspPractice.iml" filepath="$PROJECT_DIR$/JspPractice/JspPractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/KansaiUnivModule/KansaiUnivModule.iml" filepath="$PROJECT_DIR$/KansaiUnivModule/KansaiUnivModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyResearchJava.iml" filepath="$PROJECT_DIR$/MyResearchJava.iml" />
